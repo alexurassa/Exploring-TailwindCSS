@@ -1,103 +1,62 @@
 import Image from "next/image";
+import OrangeImg from "@/public/orange3.webp";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="bg-white max-w-xs p-4 my-10 md:max-w-3xl md:grid md:grid-cols-2 md:gap-4 md:p-5 shadow-[5px_5px_0px_orange]">
+      <Image
+        src={OrangeImg}
+        alt="orange on a white background"
+        className="block mx-auto md:h-auto md:w-full object-contain"
+      />
+      <section>
+        <h1 className="font-title text-3xl">A single orange</h1>
+        <p className="font-title text-xl text-gray-600">with stem and leaf</p>
+        <h2 className="text-5xl font-light my-3">
+          $1<span className="text-xl">.35</span>
+        </h2>
+        <p className="font-light text-gray-500">
+          Experience a burst of sunshine in every bite with this hand-picked,
+          sun-drenched jewel of the citrus world.
+        </p>
+        <div className="flex items-center gap-3 my-4">
+          <button className="bg-gradient-to-b from-light_orange to-orange px-4 py-2 hover:bg-gradient-to-t text-white uppercase flex-grow-1 md:flex-grow-0">
+            Add to Cart
+          </button>
+          <svg
+            className="fill-orange transition-transform hover:scale-125 duration-300 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg"
+            height="3l4px"
+            viewBox="0 -960 960 960"
+            width="34px"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+          </svg>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <h3 className="uppercase font-light text-xl">Features</h3>
+        <ul className="font-light list-disc ml-3 pl-3 text-sm marker:text-orange">
+          <li>
+            <span className="font-normal">Nature&apos;s candy</span>: A symphony
+            of sweet and tangy notes
+          </li>
+          <li>
+            <span className="font-normal">Vibrant hue</span>: A visual feast for
+            the eyes
+          </li>
+          <li>
+            <span className="font-normal">Invigorating aroma</span>: A sensory
+            delight
+          </li>
+          <li>
+            <span className="font-normal">Nutrient-rich</span>: Bursting with
+            Vitamin C
+          </li>
+          <li>
+            <span className="font-normal">Perfect for</span>: snacking, juicing,
+            or culinary creations
+          </li>
+        </ul>
+      </section>
+    </main>
   );
 }
